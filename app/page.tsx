@@ -63,6 +63,17 @@ export default function InputPage() {
  />
  </div>
 
+ <div>
+ <label className="block text-sm font-medium mb-2 text-zinc-400">Address</label>
+ <input
+ type="text"
+ name="address"
+ required
+ className="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500 transition"
+ placeholder="1234 Elm Street, Springfield"
+ />
+ </div>
+
  <button
  type="submit"
  disabled={isPending}
